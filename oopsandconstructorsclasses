@@ -1,0 +1,75 @@
+public class constructor {
+
+public static void main(String[] args) {
+
+    //oops calling oppclassname class
+
+    oppclassname classnameoop1=new oppclassname();
+
+    System.out.println(classnameoop1.car);
+    
+    classnameoop1.drive();
+    
+    classnameoop1.stop();
+    
+    //constuctor = called when a object is instantiated ( created )
+
+    // below is constructor calling another class name humanconstructor
+
+    humanconstructor human1= new humanconstructor("kiran",28, 70);
+    humanconstructor human2= new humanconstructor("manoj",29, 50);
+
+
+    System.out.println(human1.name);
+    System.out.println(human2.name);
+
+    human1.eat();
+    human2.eat();
+
+}    
+}
+
+
+// other classes below
+
+// class 1
+
+public class oppclassname {
+
+    String car="bmw";
+    String color="red";
+    int brought=2004;
+    double cost=10000;
+
+    void drive(){
+        System.out.println("drive the car");
+    }
+    
+    void stop(){
+        System.out.println("stop the car");
+    }
+}
+
+
+// class 2
+
+public class humanconstructor {
+
+    String name;
+    int age;
+    double weight;
+    
+    humanconstructor(String name, int age, double weight){
+
+        this.name=name;
+        this.age=age;
+        this.weight=weight;
+
+    }
+
+    void eat(){
+        System.out.println(this.name + " is eating");
+    }
+}
+
+
